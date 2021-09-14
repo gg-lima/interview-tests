@@ -1,0 +1,12 @@
+version: '3'
+services:
+  cardinal:
+    container_name: cardinal
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - $PWD:/cardinal
+    user: root
+    environment:
+      GRANT_SUDO: "yes"
